@@ -1,0 +1,71 @@
+:root {
+  --maze-rows: 10; /* Змінна для зберігання кількості рядків лабіринту */
+  --maze-columns: 50;
+}
+
+body {
+  background-color: #ffeccd;
+}
+
+#maze {
+    margin: 0 auto;
+    display: grid;
+    background-color: #2b3f19;
+    border-radius: 1vh;
+    grid-template-columns: repeat(var(--maze-columns), min(calc(90vw / var(--maze-columns)), calc(20vw / var(--maze-rows))));
+    grid-template-rows: repeat(var(--maze-rows), min(calc(90vw / var(--maze-columns)), calc(20vw / var(--maze-rows))));
+    width: calc(var(--maze-columns) * min(calc(90vw / var(--maze-columns)), calc(20vw / var(--maze-rows))));
+    height: calc(var(--maze-rows) * min(calc(90vw / var(--maze-columns)), calc(20vw / var(--maze-rows))));
+  }
+  
+.cell {
+    width: 100%;
+    height: 100%;
+    background-color: #c1c1c1;
+    border: 0.2vh solid #2b3f19;
+    border-radius: 1vh;
+    box-sizing: border-box;
+  }
+  
+.wall {
+    background-color: #436327;
+  }
+  
+.entry {
+    background-color: #c1c1c1;
+    border: 0.3vh solid #2b3f19;
+    border-radius: 1vh;
+    box-sizing: border-box;
+  }
+  
+.exit {
+    background-color: #c1c1c1;
+    border: 0.3vh solid #2b3f19;
+    border-radius: 1vh;
+    box-sizing: border-box;
+  }
+  
+.path {
+    background-color: #94785d;
+    border: 0.3vh solid #2b3f19;
+    border-radius: 1vh;
+    box-sizing: border-box;
+  }
+  
+#randomButton,
+#solveButton,
+#controlButton {
+    margin: 3vh auto;
+    
+    width: 20vw;
+    height: 10vh;
+
+    background-color: #97c56f;
+    border: 1vh solid #5d8838;
+    border-radius: 5vh;
+
+    text-align: center;
+    font-family: 'Nunito';
+    font-size: 4vh;
+  }
+  
